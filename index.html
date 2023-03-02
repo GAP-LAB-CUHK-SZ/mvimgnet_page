@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>mip-NeRF</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--FACEBOOK-->
+    <meta property="og:image" content="https://jonbarron.info/mipnerf/img/rays_square.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="682">
+    <meta property="og:image:height" content="682">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jonbarron.info/mipnerf/"/>
+    <meta property="og:title" content="mip-NeRF" />
+    <meta property="og:description" content="Project page for Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields." />
+
+        <!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="mip-NeRF" />
+    <meta name="twitter:description" content="Project page for Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields." />
+    <meta name="twitter:image" content="https://jonbarron.info/mipnerf/img/rays_square.png" />
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <b>MVImgNet</b>: A Large-scale Dataset of Multi-view Images <br>
+                <small>
+                    CVPR 2023
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="mailto:xianggangyu@link.cuhk.edu.cn">
+                            Xianggang Yu
+                        </a>    
+                    </li>
+                    <li>
+                        <a href="https://mutianxu.github.io/">
+                            Mutian Xu 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:yidanzhang@link.cuhk.edu.cn">
+                            Yidan Zhang
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:115010192@link.cuhk.edu.cn">
+                            Haolin Liu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#home">
+                            Chongjie Ye 
+                        </a>
+                    </li><br>
+                    <li>
+                        <a href="mailto:219019021@link.cuhk.edu.cn">
+                            Yushuang Wu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:zizhengyan@link.cuhk.edu.cn">
+                            Zizheng Yan
+                        </a>
+                    </li>
+                    <li>
+                        <a href="maito:chenmingzhu@link.cuhk.edu.cn">
+                            Chenming Zhu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:zhangyangxiong@link.cuhk.edu.cn">
+                            Zhangyang Xiong
+                        </a>
+                    </li><br>
+                    <li>
+                        <a href="mailto:tom.tyliang@gmail.com">
+                            Tianyou Liang
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://guanyingc.github.io/">
+                            Guanying Chen
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:shuguangcui@cuhk.edu.cn">
+                            Shuguang Cui
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gaplab.cuhk.edu.cn/">
+                            Xiaoguang Han
+                        </a>
+                    </li>
+                </ul>
+                <span id="cuhksz"><a href="https://gaplab.cuhk.edu.cn/" class='gap'>GAP Lab</a>, <a href = "https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen</a> </span>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <image src="img/teaser.png" class="teaser_img" id="teaser" alt="overview"><br>
+            </div>
+        </div>
+<!-- 
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/2103.13415">
+                            <image src="img/mip_paper_image.jpg" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://youtu.be/EpH175PY1A0">
+                            <image src="img/youtube_icon.png" height="60px">
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/google/mipnerf">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div> -->
+        <div class="abstract">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>
+                        Abstract
+                    </h3>
+                    <p class="text-justify">
+                        Data-driven is one of the most iconic properties of deep learning algorithms. The born of <a href="https://image-net.org/">ImageNet</a> drives a remarkable trend of `learning from large-scale data' in computer vision. Pretraining on ImageNet to obtain rich universal representations has been manifested to benefit various 2D visual tasks, and becomes a standard in 2D vision. However, due to the laborious collection of real-world 3D data, there is yet no generic dataset serving as a counterpart of ImageNet in 3D vision, thus how such a dataset can impact the 3D community is unraveled. To remedy this defect, we introduce <span><strong>MVImgNet</strong></span>, a large-scale dataset of multi-view images, which is highly convenient to gain by shooting videos of real-world objects in human daily life. It contains <span><strong>6.5 million</strong></span> frames from <span><strong>219,188</strong></span> videos crossing objects from <span><strong>238</strong></span> classes, with rich annotations of object masks, camera parameters, and point clouds. The multi-view attribute endows our dataset with 3D-aware signals, making it a soft bridge between 2D and 3D vision. <br> <br>
+                        
+                        We conduct pilot studies for probing the potential of MVImgNet on a variety of 3D and 2D visual tasks, including radiance field reconstruction, multi-view stereo, and view-consistent image understanding, where MVImgNet demonstrates promising performance, remaining lots of possibilities for future explorations. <br> <br>
+                        
+                        Besides, via dense reconstruction on MVImgNet, a 3D object point cloud dataset is derived, called <span><strong>MVPNet</strong></span>, covering <span><strong>80,000</strong></span> samples from <span><strong>150</strong></span> categories, with the class label on each point cloud. Experiments show that MVPNet can benefit the real-world 3D object classification while posing new challenges to point cloud understanding. <br> <br>
+                    
+                        MVImgNet and MVPNet are expected to be public in the near future, hoping to inspire the broader vision community.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="/page/mvimgnet_page/img/MVImgNet.mp4" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="taxonomy">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>
+                        Dataset -- MVImgNet
+                    </h3>
+
+                    <h4>  
+                        Statistics
+                    </h4>
+                    <p class="text-justify">
+                        The statistics of MVImgNet are shown in <a href="#table_stat">Tab. 1</a>. MVImgNet includes 238 object classes, from 6.5 million frames of 219,188 videos. <a href="#part_data">Fig. 1</a> shows some frames randomly sampled from MVImgNet. The annotation comprehensively covers object masks, camera parameters, and point clouds.
+                    </p>
+                    <div  class="stat_img">
+                        <figure>
+                            <image src="/page/mvimgnet_page/img/dataset_stat.png" class="img-responsive" id="table_stat">
+                            <figcaption>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa accusantium recusandae temporibus? Odit minus natus laborum. Ut sint maxime fuga velit assumenda. Quod, unde. Labore laborum suscipit vel laboriosam. Soluta.
+                            </figcaption>
+                        </figure>
+                        <br>
+                        <br>
+                        <figure>
+                            <image src="/page/mvimgnet_page/img/dataset_pano.png" class="img-responsive" id="part_data"></image>
+                        </figure>
+                        <figcaption>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi repudiandae ex, voluptatum molestiae veritatis porro odio corrupti dicta dolor reiciendis pariatur! Expedita obcaecati omnis velit, impedit est eum eos quis.
+                        </figcaption>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <h4>  
+                        Category taxonomy
+                    </h4>
+                    <div id="tox_mvi"></div>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptate error, fuga commodi dolorum quasi sapiente nemo ab quaerat blanditiis mollitia nam corrupti asperiores possimus placeat delectus beatae dolore impedit!
+                    </p>
+
+                </div>
+            </div>
+                
+        </div>
+
+        <div class="mvpnet">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>
+                        Mip-NeRF
+                    </h3>
+                    <p class="text-justify">
+                        We use integrated positional encoding to train NeRF to generate anti-aliased renderings. Rather than casting an infinitesimal ray through each pixel, we instead cast a full 3D <em>cone</em>. For each queried point along a ray, we consider its associated 3D conical frustum. Two different cameras viewing the same point in space may result in vastly different conical frustums, as illustrated here in 2D:
+                    </p>
+                    <p style="text-align:center;">
+                        <image src="img/scales_toy.png" class="img-responsive" alt="scales">
+                    </p>
+                    <p class="text-justify">
+                        In order to pass this information through the NeRF network, we fit a multivariate Gaussian to the conical frustum and use the integrated positional encoding described above to create the input feature vector to the network. 
+                    </p>
+                </div>
+            </div>    
+        </div>
+        
+        <div class="wecando">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h3>
+                            What Can MVImgNet Do?
+                        </h3>
+                        <div class="nerf">
+
+                        </div>
+                        <div class="recongnition">
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="other_stat">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>
+                        Related links
+                    </h3>
+                    <p class="text-justify">
+                        <a href="https://en.wikipedia.org/wiki/Spatial_anti-aliasing">Wikipedia</a> provides an excellent introduction to spatial anti-aliasing techniques.
+                    </p>
+                    <p class="text-justify">
+                        Mipmaps were introduced by Lance Williams in his paper "Pyramidal Parametrics" (<a href="https://software.intel.com/sites/default/files/m/7/2/c/p1-williams.pdf">Williams (1983)</a>).
+                    </p>
+                    <p class="text-justify">
+                        <a href="https://dl.acm.org/doi/abs/10.1145/964965.808589">Amanatides (1984)</a> first proposed the idea of replacing rays with cones in computer graphics rendering. 
+                    </p>
+                    <p class="text-justify">
+                        The closely related concept of <em>ray differentials</em> (<a href="https://graphics.stanford.edu/papers/trd/">Igehy (1999)</a>) is used in most modern renderers to antialias textures and other material buffers during ray tracing.
+                    </p>
+                    <p class="text-justify">
+                        Cone tracing has been used along with prefiltered voxel-based representations of scene geometry for speeding up indirect illumination calculations in <a href="https://research.nvidia.com/sites/default/files/publications/GIVoxels-pg2011-authors.pdf">Crassin et al. (2011)</a>.
+                    </p>
+                    <p class="text-justify">
+                        Mip-NeRF was implemented on top of the <a href="https://github.com/google-research/google-research/tree/master/jaxnerf">JAXNeRF</a> codebase.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@article{barron2021mipnerf,
+    title={Mip-NeRF: A Multiscale Representation 
+           for Anti-Aliasing Neural Radiance Fields},
+    author={Jonathan T. Barron and Ben Mildenhall and 
+            Matthew Tancik and Peter Hedman and 
+            Ricardo Martin-Brualla and Pratul P. Srinivasan},
+    journal={ICCV},
+    year={2021}
+}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                We thank Janne Kontkanen and David Salesin for their comments on the text, Paul Debevec for constructive discussions, and Boyang Deng for JaxNeRF. 
+                    <br>
+                MT is funded by an NSF Graduate Fellowship.
+                    <br>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/tax.js"></script>
+</html>

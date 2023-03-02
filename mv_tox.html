@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- 引入刚刚下载的 ECharts 文件 -->
+    <script src="js/echarts.min.js"></script>
+
+    <style>
+        *{
+
+            margin:0;
+            padding:0 ;
+            border:0;
+        }
+        #tox_mvi{
+            margin:0;
+            padding:0 ;
+            border:0;
+            width: 100%;
+            height: 100em;
+        }
+    </style>
+  </head>
+
+  <body>
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+    <div id="tox_mvi"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('tox_mvi'))
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b}: {c} ({d}%)'
+            },
+            toolbox: {
+            　　show: true,
+            　　feature: {
+            　　　　saveAsImage: {
+            　　　　show:true,
+            　　　　excludeComponents :['toolbox'],
+            　　　　pixelRatio: 5
+            　　　　}
+            　　}
+            },
+            series: [
+                
+                {
+                    name: '数据',
+                    type: 'pie',
+                    selectedMode: 'single',
+                    radius: ['0%', '10%'],
+                    label: {
+                        normal: {
+                        position: 'center',
+                        show: true,
+                        // color: '#FFF',
+                        textStyle: {"fontSize": 13 ,
+                           fontWeight:'bold',
+                        },
+                        
+                        },
+                    },
+                    itemStyle:{
+                        borderWidth:0, //设置border宽度
+                        // borderColor:'#fff',
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    color : ['#ccc5b9'],
+                    data: [
+                        {value: 1, name: 'MVImgNet'},
+                    ]
+                },
+
+                {
+                    name: '数据',
+                    type: 'pie',
+                    selectedMode: 'single',
+                    radius: ['10%', '20%'],
+                    label: {
+                        normal: {
+                        position: 'inner',
+                        distance:0,
+                        show: true,
+                        textStyle: {"fontSize": 7,
+                        fontWeight:'bold',
+                        },
+                        },
+                    },
+                    itemStyle:{
+                        borderWidth:0, //设置border宽度
+                        borderColor:'#fff',
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    color: ['#7f5539', '#005f73', '#023e7d','#205555'],
+
+                        
+                    data: [
+                    {value: 267.7310924369748, name: 'Artifact', label:{normal:{rotate:-43.865546218487395}}},
+                    {value: 90.7563025210084, name: 'Food', label:{normal:{rotate:-43.10924369747897}}},
+                    {value: 1.5126050420168067, name: 'Flower', label:{normal:{rotate:-89.24369747899158}}},
+                    ]
+                },
+                {
+                    name: '数据',
+                    type: 'pie',
+                    selectedMode: 'single',
+                    radius: ['20%', '35%'],
+                    label: {
+                        normal: {
+                        position: 'inner',
+                        distance:0,
+                        show: true,
+                        textStyle: {"fontSize": 7,
+                        fontWeight:'bold',
+                        },
+                        },
+                    },
+                    itemStyle:{
+                        borderWidth:0.5, //设置border宽度
+                        borderColor:'#fff',
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    color: ['#0a9396', '#94d2bd', '#FFF',"#cb997e",'#ddbea9', '#cb997e', '#ddbea9',"#cb997e",'#ddbea9', '#94d2bd', '#0a9396', '#94d2bd'],
+                    data: [
+                    {value: 45.3781512605042, name: 'Toy', label:{normal:{rotate:67.31092436974791}}},
+                {value: 10.588235294117647, name: 'Clothing', label:{normal:{rotate:39.32773109243698}}},
+                {value: 9.07563025210084, name: 'Decoration', label:{normal:{rotate:29.49579831932774}}},
+                {value: 7.563025210084034, name: 'Fabric', label:{normal:{rotate:21.1764705882353}}},
+                {value: 163.3613445378151, name: 'Instrumentality', label:{normal:{rotate:-64.28571428571428}}},
+                {value: 31.764705882352942, name: 'Other', label:{normal:{rotate:18.1512605042017}}},
+                {value: 34.78991596638656, name: 'Vegetable', label:{normal:{rotate:-15.12605042016807}}},
+                {value: 34.78991596638656, name: 'Fruit', label:{normal:{rotate:-49.91596638655463}}},
+                {value: 13.61344537815126, name: 'Delicatessen', label:{normal:{rotate:-74.11764705882354}}},
+                {value: 4.53781512605042, name: 'Fresh', label:{normal:{rotate:-83.19327731092437}}},
+                {value: 3.0252100840336134, name: 'Snacks', label:{normal:{rotate:-86.97478991596637}}},
+                {value: 1.5126050420168067, name: ' ', label:{normal:{rotate:-89.24369747899163}}},
+                    ]
+                },
+
+                {
+                    name: '数据',
+                    type: 'pie',
+                    radius: ['35%', '50%'],
+                    label: {
+                        normal: {
+                        position: 'inner',
+                        show: true,
+                        textStyle: {"fontSize": 5 },
+                        padding:[0,0],
+                        },
+                        
+                    },
+                    color: ['#cad2c5','#FFF','#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892','#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892','#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892', '#e6ccb2', '#ddb892',  '#e6ccb2', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0',  '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0', '#cad2c5', '#cbf3f0'],
+                    itemStyle:{
+                        borderWidth:0.5,
+                        borderColor:'#fff',
+                    },
+                    data: [
+                    {value: 34.78991596638656, name: 'Doll', label:{normal:{rotate:72.60504201680672}}},
+                    {value: 10.588235294117647, name: 'Model', label:{normal:{rotate:49.915966386554615}}},
+                    {value: 1.5126050420168067, name: 'Cap', label:{normal:{rotate:43.865546218487395}}},
+                    {value: 1.5126050420168067, name: 'Scarf', label:{normal:{rotate:42.35294117647059}}},
+                    {value: 1.5126050420168067, name: 'Shoe', label:{normal:{rotate:40.84033613445378}}},
+                    {value: 1.5126050420168067, name: 'Skirt', label:{normal:{rotate:39.32773109243697}}},
+                    {value: 1.5126050420168067, name: 'Pants', label:{normal:{rotate:37.81512605042016}}},
+                    {value: 1.5126050420168067, name: 'Clothing', label:{normal:{rotate:36.30252100840335}}},
+                    {value: 1.5126050420168067, name: 'Glove', label:{normal:{rotate:34.789915966386545}}},
+                    {value: 1.5126050420168067, name: 'Lipstick', label:{normal:{rotate:33.277310924369736}}},
+                    {value: 1.5126050420168067, name: 'Rockery', label:{normal:{rotate:31.764705882352924}}},
+                    {value: 1.5126050420168067, name: 'Root carving', label:{normal:{rotate:30.252100840336116}}},
+                    {value: 1.5126050420168067, name: 'Lantern', label:{normal:{rotate:28.739495798319307}}},
+                    {value: 1.5126050420168067, name: 'Accessory', label:{normal:{rotate:27.2268907563025}}},
+                    {value: 1.5126050420168067, name: 'Watch', label:{normal:{rotate:25.71428571428569}}},
+                    {value: 1.5126050420168067, name: 'Pillow', label:{normal:{rotate:24.201680672268882}}},
+                    {value: 1.5126050420168067, name: 'Towel', label:{normal:{rotate:22.689075630252074}}},
+                    {value: 1.5126050420168067, name: 'Sanitary napkin', label:{normal:{rotate:21.176470588235265}}},
+                    {value: 1.5126050420168067, name: 'Toilet paper', label:{normal:{rotate:19.663865546218457}}},
+                    {value: 1.5126050420168067, name: 'Quilt', label:{normal:{rotate:18.151260504201648}}},
+                    {value: 30.252100840336137, name: 'Furniture', label:{normal:{rotate:2.2689075630251754}}},
+                    {value: 13.61344537815126, name: 'Kitchen Ware', label:{normal:{rotate:-19.663865546218524}}},
+                    {value: 19.66386554621849, name: 'Container', label:{normal:{rotate:-36.302521008403396}}},
+                    {value: 19.66386554621849, name: 'Device', label:{normal:{rotate:-55.966386554621884}}},
+                    {value: 28.739495798319325, name: 'Tool and Hardware', label:{normal:{rotate:-80.16806722689078}}},
+                    {value: 25.71428571428571, name: 'Home Appliance', label:{normal:{rotate:72.60504201680669}}},
+                    {value: 7.563025210084034, name: 'Vehicle', label:{normal:{rotate:55.966386554621835}}},
+                    {value: 18.15126050420168, name: 'Entertainment', label:{normal:{rotate:43.10924369747897}}},
+                    {value: 1.5126050420168067, name: 'Helmet', label:{normal:{rotate:33.27731092436974}}},
+                    {value: 1.5126050420168067, name: 'Bench', label:{normal:{rotate:31.764705882352928}}},
+                    {value: 1.5126050420168067, name: 'Candle', label:{normal:{rotate:30.252100840336112}}},
+                    {value: 1.5126050420168067, name: 'Bath sponge', label:{normal:{rotate:28.739495798319297}}},
+                    {value: 1.5126050420168067, name: 'Lighter', label:{normal:{rotate:27.22689075630248}}},
+                    {value: 1.5126050420168067, name: 'Key', label:{normal:{rotate:25.714285714285666}}},
+                    {value: 1.5126050420168067, name: 'Toothpaste', label:{normal:{rotate:24.20168067226885}}},
+                    {value: 1.5126050420168067, name: 'Swin ring', label:{normal:{rotate:22.689075630252034}}},
+                    {value: 1.5126050420168067, name: 'Telescope', label:{normal:{rotate:21.17647058823522}}},
+                    {value: 1.5126050420168067, name: 'Ashtray', label:{normal:{rotate:19.663865546218403}}},
+                    {value: 1.5126050420168067, name: 'Extinguisher', label:{normal:{rotate:18.151260504201588}}},
+                    {value: 1.5126050420168067, name: 'Hand Warmer', label:{normal:{rotate:16.638655462184772}}},
+                    {value: 1.5126050420168067, name: 'Bell', label:{normal:{rotate:15.126050420167957}}},
+                    {value: 1.5126050420168067, name: 'Calendar', label:{normal:{rotate:13.613445378151141}}},
+                    {value: 1.5126050420168067, name: 'Electronic mosquito swatter', label:{normal:{rotate:12.100840336134326}}},
+                    {value: 1.5126050420168067, name: 'Electronic mosquito killer', label:{normal:{rotate:10.58823529411751}}},
+                    {value: 1.5126050420168067, name: 'Insecticide', label:{normal:{rotate:9.075630252100694}}},
+                    {value: 1.5126050420168067, name: 'Inflator', label:{normal:{rotate:7.563025210083879}}},
+                    {value: 1.5126050420168067, name: 'Blackboard eraser', label:{normal:{rotate:6.050420168067063}}},
+                    {value: 1.5126050420168067, name: 'Stapler', label:{normal:{rotate:4.537815126050248}}},
+                    {value: 1.5126050420168067, name: 'Cigarette', label:{normal:{rotate:3.025210084033432}}},
+                    {value: 1.5126050420168067, name: 'Ginger', label:{normal:{rotate:1.5126050420166166}}},
+                    {value: 1.5126050420168067, name: 'Cauliflower', label:{normal:{rotate:-1.9895196601282805e-13}}},
+                    {value: 1.5126050420168067, name: 'Broccoli', label:{normal:{rotate:-1.5126050420170145}}},
+                    {value: 1.5126050420168067, name: 'Cabbage', label:{normal:{rotate:-3.02521008403383}}},
+                    {value: 1.5126050420168067, name: 'Eggplant', label:{normal:{rotate:-4.537815126050646}}},
+                    {value: 1.5126050420168067, name: 'Pumpkin', label:{normal:{rotate:-6.050420168067461}}},
+                    {value: 1.5126050420168067, name: 'winter melon', label:{normal:{rotate:-7.563025210084277}}},
+                    {value: 1.5126050420168067, name: 'Tomato', label:{normal:{rotate:-9.075630252101092}}},
+                    {value: 1.5126050420168067, name: 'Corn', label:{normal:{rotate:-10.588235294117908}}},
+                    {value: 1.5126050420168067, name: 'Sunflower', label:{normal:{rotate:-12.100840336134723}}},
+                    {value: 1.5126050420168067, name: 'Potato', label:{normal:{rotate:-13.613445378151539}}},
+                    {value: 1.5126050420168067, name: 'Sweet potato', label:{normal:{rotate:-15.126050420168355}}},
+                    {value: 1.5126050420168067, name: 'Chinese cabbage', label:{normal:{rotate:-16.63865546218517}}},
+                    {value: 1.5126050420168067, name: 'Onion', label:{normal:{rotate:-18.151260504201986}}},
+                    {value: 1.5126050420168067, name: 'Momordica charantia', label:{normal:{rotate:-19.6638655462188}}},
+                    {value: 1.5126050420168067, name: 'Chili', label:{normal:{rotate:-21.176470588235617}}},
+                    {value: 1.5126050420168067, name: 'Cucumber', label:{normal:{rotate:-22.689075630252432}}},
+                    {value: 1.5126050420168067, name: 'Chestnut', label:{normal:{rotate:-24.201680672269248}}},
+                    {value: 1.5126050420168067, name: 'Okra', label:{normal:{rotate:-25.714285714286063}}},
+                    {value: 1.5126050420168067, name: 'Lotus root', label:{normal:{rotate:-27.22689075630288}}},
+                    {value: 1.5126050420168067, name: 'Taro', label:{normal:{rotate:-28.739495798319695}}},
+                    {value: 1.5126050420168067, name: 'Garlic', label:{normal:{rotate:-30.25210084033651}}},
+                    {value: 1.5126050420168067, name: 'Sugarcane', label:{normal:{rotate:-31.764705882353326}}},
+                    {value: 1.5126050420168067, name: 'Grapefruit', label:{normal:{rotate:-33.27731092437014}}},
+                    {value: 1.5126050420168067, name: 'Jackfruit', label:{normal:{rotate:-34.78991596638696}}},
+                    {value: 1.5126050420168067, name: 'Star fruit', label:{normal:{rotate:-36.30252100840377}}},
+                    {value: 1.5126050420168067, name: 'Avocado', label:{normal:{rotate:-37.81512605042059}}},
+                    {value: 1.5126050420168067, name: 'Shakyamuni', label:{normal:{rotate:-39.3277310924374}}},
+                    {value: 1.5126050420168067, name: 'Coconut', label:{normal:{rotate:-40.84033613445422}}},
+                    {value: 1.5126050420168067, name: 'Pineapple', label:{normal:{rotate:-42.352941176471035}}},
+                    {value: 1.5126050420168067, name: 'Kiwi', label:{normal:{rotate:-43.86554621848785}}},
+                    {value: 1.5126050420168067, name: 'Pomegranate', label:{normal:{rotate:-45.378151260504666}}},
+                    {value: 1.5126050420168067, name: 'Pawpaw', label:{normal:{rotate:-46.89075630252148}}},
+                    {value: 1.5126050420168067, name: 'Watermelon', label:{normal:{rotate:-48.4033613445383}}},
+                    {value: 1.5126050420168067, name: 'Apple', label:{normal:{rotate:-49.91596638655511}}},
+                    {value: 1.5126050420168067, name: 'Banana', label:{normal:{rotate:-51.42857142857193}}},
+                    {value: 1.5126050420168067, name: 'Pear', label:{normal:{rotate:-52.94117647058874}}},
+                    {value: 1.5126050420168067, name: 'Cantaloupe', label:{normal:{rotate:-54.45378151260556}}},
+                    {value: 1.5126050420168067, name: 'Durian', label:{normal:{rotate:-55.966386554622375}}},
+                    {value: 1.5126050420168067, name: 'Persimmon', label:{normal:{rotate:-57.47899159663919}}},
+                    {value: 1.5126050420168067, name: 'Grape', label:{normal:{rotate:-58.991596638656006}}},
+                    {value: 1.5126050420168067, name: 'Peach', label:{normal:{rotate:-60.50420168067282}}},
+                    {value: 1.5126050420168067, name: 'Guava', label:{normal:{rotate:-62.01680672268964}}},
+                    {value: 1.5126050420168067, name: 'Tangerine', label:{normal:{rotate:-63.52941176470645}}},
+                    {value: 1.5126050420168067, name: 'Lemon', label:{normal:{rotate:-65.04201680672327}}},
+                    {value: 1.5126050420168067, name: 'Mango', label:{normal:{rotate:-66.55462184874008}}},
+                    {value: 1.5126050420168067, name: 'Cookie', label:{normal:{rotate:-68.0672268907569}}},
+                    {value: 1.5126050420168067, name: 'Fries', label:{normal:{rotate:-69.57983193277371}}},
+                    {value: 1.5126050420168067, name: 'Donut', label:{normal:{rotate:-71.09243697479053}}},
+                    {value: 1.5126050420168067, name: 'Chinese hot dishes', label:{normal:{rotate:-72.60504201680735}}},
+                    {value: 1.5126050420168067, name: 'Roast Duck', label:{normal:{rotate:-74.11764705882416}}},
+                    {value: 1.5126050420168067, name: 'Pizza', label:{normal:{rotate:-75.63025210084098}}},
+                    {value: 1.5126050420168067, name: 'Bread', label:{normal:{rotate:-77.14285714285779}}},
+                    {value: 1.5126050420168067, name: 'Bun', label:{normal:{rotate:-78.65546218487458}}},
+                    {value: 1.5126050420168067, name: 'Sausage', label:{normal:{rotate:-80.16806722689137}}},
+                    {value: 1.5126050420168067, name: 'Eggs', label:{normal:{rotate:-81.68067226890815}}},
+                    {value: 1.5126050420168067, name: 'Conch', label:{normal:{rotate:-83.19327731092494}}},
+                    {value: 1.5126050420168067, name: 'Seafood', label:{normal:{rotate:-84.70588235294173}}},
+                    {value: 1.5126050420168067, name: 'Bagged snacks', label:{normal:{rotate:-86.21848739495852}}},
+                    {value: 1.5126050420168067, name: 'Ice cream', label:{normal:{rotate:-87.7310924369753}}},
+                    {value: 1.5126050420168067, name: ' ', label:{normal:{rotate:-89.24369747899209}}},
+                    ]
+                },
+                {
+                    name: '数据',
+                    type: 'pie',
+                    selectedMode: 'single',
+                    radius: ['50%', '65%'],
+                    label: {
+                        normal: {
+                        position: 'inner',
+                        show: true,
+                        textStyle: {fontSize: 3, fontWeight:'bold' },
+                        padding:[0,0],
+                        },
+                    },
+                    itemStyle:{
+                        borderWidth:0.5, //设置border宽度
+                        borderColor:'#fff',
+                    },
+                    labelLine: {
+                        show: false
+                    },
+                    color: ['#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#eed7c5', '#fff1e6', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#fff1e6',],
+
+                    data: [
+                    {value: 0.0032337749831574223, name: 'Plush toy', label:{normal:{rotate:89.99838311250842}}},
+{value: 0.0032337749831574223, name: 'Toy figure', label:{normal:{rotate:89.99514933752526}}},
+{value: 0.0032337749831574223, name: 'Toy bear', label:{normal:{rotate:89.9919155625421}}},
+{value: 0.0032337749831574223, name: 'Toy cat', label:{normal:{rotate:89.98868178755895}}},
+{value: 0.0032337749831574223, name: 'Toy bird', label:{normal:{rotate:89.98544801257579}}},
+{value: 0.0032337749831574223, name: 'Toy insect', label:{normal:{rotate:89.98221423759263}}},
+{value: 0.0032337749831574223, name: 'Toy cow', label:{normal:{rotate:89.97898046260947}}},
+{value: 0.0032337749831574223, name: 'Toy dog', label:{normal:{rotate:89.97574668762631}}},
+{value: 0.0032337749831574223, name: 'Toy monkey', label:{normal:{rotate:89.97251291264315}}},
+{value: 0.0032337749831574223, name: 'Toy elephant', label:{normal:{rotate:89.96927913766}}},
+{value: 0.0032337749831574223, name: 'Toy fish', label:{normal:{rotate:89.96604536267684}}},
+{value: 0.0032337749831574223, name: 'Toy horse', label:{normal:{rotate:89.96281158769368}}},
+{value: 0.0032337749831574223, name: 'Toy sheep', label:{normal:{rotate:89.95957781271052}}},
+{value: 0.0032337749831574223, name: 'Toy mouse', label:{normal:{rotate:89.95634403772736}}},
+{value: 0.0032337749831574223, name: 'Toy tiger', label:{normal:{rotate:89.9531102627442}}},
+{value: 0.0032337749831574223, name: 'Toy rabbit', label:{normal:{rotate:89.94987648776105}}},
+{value: 0.0032337749831574223, name: 'Toy dragon', label:{normal:{rotate:89.94664271277789}}},
+{value: 0.0032337749831574223, name: 'Toy snake', label:{normal:{rotate:89.94340893779473}}},
+{value: 0.0032337749831574223, name: 'Toy chook', label:{normal:{rotate:89.94017516281157}}},
+{value: 0.0032337749831574223, name: 'Toy pig', label:{normal:{rotate:89.93694138782841}}},
+{value: 0.0032337749831574223, name: 'Toy butterfly ', label:{normal:{rotate:89.93370761284525}}},
+{value: 0.0032337749831574223, name: 'Toy duck', label:{normal:{rotate:89.9304738378621}}},
+{value: 0.0032337749831574223, name: 'Toy turtle', label:{normal:{rotate:89.92724006287894}}},
+{value: 0.0032337749831574223, name: 'Vessel', label:{normal:{rotate:89.92400628789578}}},
+{value: 0.0032337749831574223, name: 'Train', label:{normal:{rotate:89.92077251291262}}},
+{value: 0.0032337749831574223, name: 'Rifle', label:{normal:{rotate:89.91753873792946}}},
+{value: 0.0032337749831574223, name: 'Motorcycle', label:{normal:{rotate:89.9143049629463}}},
+{value: 0.0032337749831574223, name: 'Pistol', label:{normal:{rotate:89.91107118796315}}},
+{value: 0.0032337749831574223, name: 'Car', label:{normal:{rotate:89.90783741297999}}},
+{value: 0.0032337749831574223, name: 'Airplane', label:{normal:{rotate:89.90460363799683}}},
+{value: 35.9240062878958, name: ' ', label:{normal:{rotate:71.94098360655735}}},
+{value: 29.618145070738827, name: ' ', label:{normal:{rotate:39.16990792724003}}},
+{value: 16.489018639119696, name: ' ', label:{normal:{rotate:16.116326072310777}}},
+{value: 0.0032337749831574223, name: 'Table', label:{normal:{rotate:7.870199865259349}}},
+{value: 0.0032337749831574223, name: 'Sofa', label:{normal:{rotate:7.8669660902761915}}},
+{value: 0.0032337749831574223, name: 'Mailbox', label:{normal:{rotate:7.863732315293034}}},
+{value: 0.0032337749831574223, name: 'Bookshelf', label:{normal:{rotate:7.860498540309877}}},
+{value: 0.0032337749831574223, name: 'Faucet', label:{normal:{rotate:7.857264765326719}}},
+{value: 0.0032337749831574223, name: 'Chair', label:{normal:{rotate:7.854030990343562}}},
+{value: 0.0032337749831574223, name: 'Caninet', label:{normal:{rotate:7.850797215360404}}},
+{value: 0.0032337749831574223, name: 'Bed', label:{normal:{rotate:7.847563440377247}}},
+{value: 0.0032337749831574223, name: 'Bathtub', label:{normal:{rotate:7.844329665394089}}},
+{value: 0.0032337749831574223, name: 'Ashcan', label:{normal:{rotate:7.841095890410932}}},
+{value: 0.0032337749831574223, name: 'Coat rack', label:{normal:{rotate:7.837862115427774}}},
+{value: 0.0032337749831574223, name: 'Ceiling lamp', label:{normal:{rotate:7.834628340444617}}},
+{value: 0.0032337749831574223, name: 'Wall lamp', label:{normal:{rotate:7.831394565461459}}},
+{value: 0.0032337749831574223, name: 'Light switch', label:{normal:{rotate:7.828160790478302}}},
+{value: 0.0032337749831574223, name: 'Shower', label:{normal:{rotate:7.8249270154951445}}},
+{value: 0.0032337749831574223, name: 'Toilet', label:{normal:{rotate:7.821693240511987}}},
+{value: 0.0032337749831574223, name: 'Sink', label:{normal:{rotate:7.8184594655288295}}},
+{value: 0.0032337749831574223, name: 'Power socket', label:{normal:{rotate:7.815225690545672}}},
+{value: 0.0032337749831574223, name: 'Scales', label:{normal:{rotate:7.811991915562515}}},
+{value: 0.0032337749831574223, name: 'End table', label:{normal:{rotate:7.808758140579357}}},
+{value: 0.0032337749831574223, name: 'Stove', label:{normal:{rotate:7.8055243655962}}},
+{value: 0.0032337749831574223, name: 'Microwave', label:{normal:{rotate:7.802290590613042}}},
+{value: 0.0032337749831574223, name: 'Dishwasher', label:{normal:{rotate:7.799056815629885}}},
+{value: 0.0032337749831574223, name: 'Rice cooker', label:{normal:{rotate:7.795823040646727}}},
+{value: 0.0032337749831574223, name: 'Pressure cooker', label:{normal:{rotate:7.79258926566357}}},
+{value: 0.0032337749831574223, name: 'Toaster', label:{normal:{rotate:7.789355490680412}}},
+{value: 0.0032337749831574223, name: 'Chopsticks', label:{normal:{rotate:7.786121715697255}}},
+{value: 0.0032337749831574223, name: 'Spoon', label:{normal:{rotate:7.782887940714097}}},
+{value: 0.0032337749831574223, name: 'Stirrer', label:{normal:{rotate:7.77965416573094}}},
+{value: 0.0032337749831574223, name: 'Bag', label:{normal:{rotate:7.7764203907477825}}},
+{value: 0.0032337749831574223, name: 'Bottle', label:{normal:{rotate:7.773186615764625}}},
+{value: 0.0032337749831574223, name: 'Flowerpot', label:{normal:{rotate:7.7699528407814675}}},
+{value: 0.0032337749831574223, name: 'Mug', label:{normal:{rotate:7.76671906579831}}},
+{value: 0.0032337749831574223, name: 'Pot', label:{normal:{rotate:7.763485290815153}}},
+{value: 0.0032337749831574223, name: 'Can', label:{normal:{rotate:7.760251515831995}}},
+{value: 0.0032337749831574223, name: 'Bowl', label:{normal:{rotate:7.757017740848838}}},
+{value: 0.0032337749831574223, name: 'Basket', label:{normal:{rotate:7.75378396586568}}},
+{value: 0.0032337749831574223, name: 'Bucket', label:{normal:{rotate:7.750550190882523}}},
+{value: 0.0032337749831574223, name: 'Jug', label:{normal:{rotate:7.747316415899365}}},
+{value: 0.0032337749831574223, name: 'Paper box', label:{normal:{rotate:7.744082640916208}}},
+{value: 0.0032337749831574223, name: 'Box', label:{normal:{rotate:7.74084886593305}}},
+{value: 0.0032337749831574223, name: 'Luggage case', label:{normal:{rotate:7.737615090949893}}},
+{value: 0.0032337749831574223, name: 'Telephone', label:{normal:{rotate:7.734381315966735}}},
+{value: 0.0032337749831574223, name: 'Printer', label:{normal:{rotate:7.731147540983578}}},
+{value: 0.0032337749831574223, name: 'Microphone', label:{normal:{rotate:7.7279137660004205}}},
+{value: 0.0032337749831574223, name: 'Loudspeaker', label:{normal:{rotate:7.724679991017263}}},
+{value: 0.0032337749831574223, name: 'Laptop', label:{normal:{rotate:7.7214462160341055}}},
+{value: 0.0032337749831574223, name: 'Earphone', label:{normal:{rotate:7.718212441050948}}},
+{value: 0.0032337749831574223, name: 'Display', label:{normal:{rotate:7.714978666067791}}},
+{value: 0.0032337749831574223, name: 'Computer keyboard', label:{normal:{rotate:7.711744891084633}}},
+{value: 0.0032337749831574223, name: 'Camera', label:{normal:{rotate:7.708511116101476}}},
+{value: 0.0032337749831574223, name: 'Cassette', label:{normal:{rotate:7.705277341118318}}},
+{value: 0.0032337749831574223, name: 'Computer mouse', label:{normal:{rotate:7.702043566135161}}},
+{value: 0.0032337749831574223, name: 'Tripod', label:{normal:{rotate:7.698809791152003}}},
+{value: 0.0032337749831574223, name: 'Selfie stick', label:{normal:{rotate:7.695576016168846}}},
+{value: 0.0032337749831574223, name: 'Can opener', label:{normal:{rotate:7.692342241185688}}},
+{value: 0.0032337749831574223, name: 'Hammer', label:{normal:{rotate:7.689108466202531}}},
+{value: 0.0032337749831574223, name: 'Screw driver', label:{normal:{rotate:7.685874691219373}}},
+{value: 0.0032337749831574223, name: 'Ladder', label:{normal:{rotate:7.682640916236216}}},
+{value: 0.0032337749831574223, name: 'Pipe PVC Metal pipe', label:{normal:{rotate:7.6794071412530585}}},
+{value: 0.0032337749831574223, name: 'Axe', label:{normal:{rotate:7.676173366269901}}},
+{value: 0.0032337749831574223, name: 'Shovel', label:{normal:{rotate:7.6729395912867435}}},
+{value: 0.0032337749831574223, name: 'Besom', label:{normal:{rotate:7.669705816303586}}},
+{value: 0.0032337749831574223, name: 'Mop', label:{normal:{rotate:7.666472041320429}}},
+{value: 0.0032337749831574223, name: 'Lock', label:{normal:{rotate:7.663238266337271}}},
+{value: 0.0032337749831574223, name: 'Doorknob', label:{normal:{rotate:7.660004491354114}}},
+{value: 0.0032337749831574223, name: 'Hairbrush', label:{normal:{rotate:7.656770716370956}}},
+{value: 0.0032337749831574223, name: 'Razor', label:{normal:{rotate:7.653536941387799}}},
+{value: 0.0032337749831574223, name: 'Adhesive hook', label:{normal:{rotate:7.650303166404641}}},
+{value: 0.0032337749831574223, name: 'Thermometer', label:{normal:{rotate:7.647069391421484}}},
+{value: 0.0032337749831574223, name: 'Adapter(Water pipe)', label:{normal:{rotate:7.643835616438326}}},
+{value: 0.0032337749831574223, name: 'Electric saw', label:{normal:{rotate:7.640601841455169}}},
+{value: 0.0032337749831574223, name: 'Electric drill', label:{normal:{rotate:7.637368066472011}}},
+{value: 0.0032337749831574223, name: 'Ironmongery', label:{normal:{rotate:7.634134291488854}}},
+{value: 0.0032337749831574223, name: 'Wahser', label:{normal:{rotate:7.6309005165056965}}},
+{value: 0.0032337749831574223, name: 'Lamp', label:{normal:{rotate:7.627666741522539}}},
+{value: 0.0032337749831574223, name: 'Clock', label:{normal:{rotate:7.6244329665393815}}},
+{value: 0.0032337749831574223, name: 'Umbrella', label:{normal:{rotate:7.621199191556224}}},
+{value: 0.0032337749831574223, name: 'Dryer', label:{normal:{rotate:7.617965416573067}}},
+{value: 0.0032337749831574223, name: 'Fan', label:{normal:{rotate:7.614731641589909}}},
+{value: 0.0032337749831574223, name: 'Flashlight', label:{normal:{rotate:7.611497866606752}}},
+{value: 0.0032337749831574223, name: 'Hair dryer', label:{normal:{rotate:7.608264091623594}}},
+{value: 0.0032337749831574223, name: 'Projector', label:{normal:{rotate:7.605030316640437}}},
+{value: 0.0032337749831574223, name: 'Cabinet Air Conditioner', label:{normal:{rotate:7.601796541657279}}},
+{value: 0.0032337749831574223, name: 'Desk Air Conditioner', label:{normal:{rotate:7.598562766674122}}},
+{value: 0.0032337749831574223, name: 'Refrigerator', label:{normal:{rotate:7.595328991690964}}},
+{value: 0.0032337749831574223, name: 'Power strip', label:{normal:{rotate:7.592095216707807}}},
+{value: 0.0032337749831574223, name: 'Cleaner', label:{normal:{rotate:7.588861441724649}}},
+{value: 0.0032337749831574223, name: 'Heating radiator', label:{normal:{rotate:7.585627666741492}}},
+{value: 0.0032337749831574223, name: 'Humidifier', label:{normal:{rotate:7.5823938917583344}}},
+{value: 0.0032337749831574223, name: 'Bulb', label:{normal:{rotate:7.579160116775177}}},
+{value: 0.0032337749831574223, name: 'Bus', label:{normal:{rotate:7.5759263417920195}}},
+{value: 0.0032337749831574223, name: 'Bicycle', label:{normal:{rotate:7.572692566808862}}},
+{value: 0.0032337749831574223, name: 'Wheelchair', label:{normal:{rotate:7.569458791825705}}},
+{value: 0.0032337749831574223, name: 'Walking stick', label:{normal:{rotate:7.566225016842547}}},
+{value: 0.0032337749831574223, name: 'Tricycle', label:{normal:{rotate:7.56299124185939}}},
+{value: 0.0032337749831574223, name: 'Piano', label:{normal:{rotate:7.559757466876232}}},
+{value: 0.0032337749831574223, name: 'Guitar', label:{normal:{rotate:7.556523691893075}}},
+{value: 0.0032337749831574223, name: 'Easel', label:{normal:{rotate:7.553289916909917}}},
+{value: 0.0032337749831574223, name: 'Guitar stand', label:{normal:{rotate:7.55005614192676}}},
+{value: 0.0032337749831574223, name: 'Book', label:{normal:{rotate:7.546822366943602}}},
+{value: 0.0032337749831574223, name: 'Percussion', label:{normal:{rotate:7.543588591960445}}},
+{value: 0.0032337749831574223, name: 'Strings', label:{normal:{rotate:7.540354816977287}}},
+{value: 0.0032337749831574223, name: 'Wind instruments', label:{normal:{rotate:7.53712104199413}}},
+{value: 0.0032337749831574223, name: 'Balloons', label:{normal:{rotate:7.533887267010972}}},
+{value: 0.0032337749831574223, name: 'Soccer', label:{normal:{rotate:7.530653492027815}}},
+{value: 0.0032337749831574223, name: 'Racket', label:{normal:{rotate:7.5274197170446575}}},
+{value: 0.0032337749831574223, name: 'Badminton', label:{normal:{rotate:7.5241859420615}}},
+{value: 71.71219402649899, name: ' ', label:{normal:{rotate:-28.333527958679575}}},
+{value: 73.20619806871773, name: ' ', label:{normal:{rotate:79.20727599371206}}},
+{value: 69.46795418818773, name: ' ', label:{normal:{rotate:7.8701998652593375}}},
+{value: 36.19887716146418, name: ' ', label:{normal:{rotate:-44.963215809566606}}},
+{value: 10.38688524590164, name: ' ', label:{normal:{rotate:-68.2560970132495}}},
+{value: 10.00853357287222, name: ' ', label:{normal:{rotate:-78.45380642263643}}},
+{value: 6.541926790927464, name: ' ', label:{normal:{rotate:-86.7290366045363}}},
+                    ]
+                },
+
+            ]
+        };
+
+        myChart.setOption(option);
+    
+    </script>
+  </body>
+</html>
