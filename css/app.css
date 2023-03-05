@@ -209,6 +209,17 @@ figcaption {
   height: 60em;
 }
 
+#panopc{
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: 20em;
+}
+/* .panojs>div{
+  float:left; 
+
+} */
+
 #mvp_cls{
   /* margin-left: -15em; */
   text-align:center;
@@ -219,6 +230,21 @@ figcaption {
 .boldt{
   font-weight: bold;
 }
+
+#table_stat{
+  text-align: center;
+  width: auto;
+  height: 10em;
+}
+#part_data{
+
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;  
+  width: auto;
+  height: 20em;
+}
+  
 
 
 /* #cuhkszlink a:hover{

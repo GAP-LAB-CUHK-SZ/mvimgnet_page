@@ -41,7 +41,7 @@ var myChart = echarts.init(document.getElementById('tox_mvi'));
                     },
                     color : ['#ccc5b9'],
                     data: [
-                        {value: 254795, name: 'MVImgNet'},
+                        {value: 1, name: 'MVImgNet'},
                     ]
                 },
 
@@ -71,9 +71,9 @@ var myChart = echarts.init(document.getElementById('tox_mvi'));
 
                         
                     data: [
-                        {value: 191151, name: 'Artifact', label:{normal:{rotate:-45.03867815302499}}},
-                        {value: 61621, name: 'Food', label:{normal:{rotate:-43.609529229380485}}},
-                        {value: 2023, name: 'Flower', label:{normal:{rotate:-88.5708510763555}}},
+                        {value: 0.750214, name: 'Artifact', label:{normal:{rotate:-45.03867815302499}}},
+                        {value: 0.238920, name: 'Food', label:{normal:{rotate:-43.609529229380485}}},
+                        {value: 0.010866, name: 'Flower', label:{normal:{rotate:-88.5708510763555}}},
                     ]
                 },
                 {
