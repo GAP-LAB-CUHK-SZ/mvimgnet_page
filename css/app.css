@@ -196,17 +196,28 @@ span.highlight {
 }
 figcaption {
   width: 70%;
-  text-align: left;
+  text-align: center;
   margin: 0 auto;
   font: 1em;
   color: black;
 }
 
 #tox_mvi{
-  margin-left: -15em;
+  /* margin-left: -15em; */
   text-align:center;
-  width:80em;
-  height: 100em;
+  width:auto;
+  height: 60em;
+}
+
+#mvp_cls{
+  /* margin-left: -15em; */
+  text-align:center;
+  width:auto;
+  height: 40em;
+}
+
+.boldt{
+  font-weight: bold;
 }
 
 
