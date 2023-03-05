@@ -219,7 +219,12 @@ figcaption {
   float:left; 
 
 } */
-
+#mvp_table{
+  margin-left: auto;
+  margin-right: auto;
+  height: 10em;
+  width: auto;
+}
 #mvp_cls{
   /* margin-left: -15em; */
   text-align:center;

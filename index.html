@@ -217,7 +217,7 @@
                     <figure>
                         <div id="tox_mvi"></div>
                         <figcaption>
-                            Taxonomy figure of the MVImgNet, where the angle of each class denotes its actual data proportion. <span class="boldt">Interior:</span>  Parent class. <span class="boldt">Exterior:
+                            <span class="boldt">Fig.2:</span> Taxonomy figure of the MVImgNet, where the angle of each class denotes its actual data proportion. <span class="boldt">Interior:</span>  Parent class. <span class="boldt">Exterior:
                             </span>  Children class. 
                             <!-- Hover on the sector introduces the exact amount and ratio of the category.  -->
                         </figcaption>                            
@@ -235,20 +235,39 @@
                         Dataset -- MVPNet
                     </h3>
                     <p class="text-justify">
-                        Derived from the dense reconstruction on MVImgNet (as mentioned in ), a new large-scale real-world 3D object point cloud dataset–MVPNet, is born, which contains 80,000 point clouds with 150 categories. As listed in Tab. 6, compared with existing 3D object datasets, our MVPNet contains a conspicuously richer amount of real-world object point clouds, with abundant categories covering many common objects in the real life. The category distribution of MVPNet dataset is shown in Fig. 9.
+                        Derived from the dense reconstruction on MVImgNet (as mentioned in ), a new large-scale real-world 3D object point cloud dataset–MVPNet, is born, which contains 80,000 point clouds with 150 categories. As listed in <a href="#mvp_table">Tab. 2</a>, compared with existing 3D object datasets, our MVPNet contains a conspicuously richer amount of real-world object point clouds, with abundant categories covering many common objects in the real life. The category distribution of MVPNet dataset is shown in <a href="#mvp_cls">Fig. 4</a> .
                     </p>
                     <div class="panojs">
-
                         <div>
                             <figure>
+                                <image src="img/mvp_compare_table.png" class="img-responsive" id="mvp_table"></image>
+                                <figcaption>
+                                    <span class="boldt">Tab.2:</span> Comparison between MVPNet and existing datasets
+                                    of 3D object point clouds.
+                                    <!-- Hover on the sector introduces the exact amount and ratio of the category.  -->
+                                </figcaption>                            
+                            </figure>
+                        </div>                        
+                        <div>
+                            <figure id="fig_panopc">
                                 <image src="img/pcpano_lowd.png" class="img-responsive" id="panopc"></image>
                                 <figcaption>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsam aspernatur dolorem cum natus? Blanditiis exercitationem consequuntur ad amet harum, hic laborum adipisci aperiam repellendus temporibus, sit atque eos corrupti.
+                                    <span class="boldt">Fig.3:</span> Some dense reconstructed 3D point clouds sampled from MVPNet
                                     <!-- Hover on the sector introduces the exact amount and ratio of the category.  -->
                                 </figcaption>                            
                             </figure>
                         </div>
-                        <div id="mvp_cls"></div>
+                        <div>
+                            <figure id="mvp_tax_js">
+                                <div id="mvp_cls"></div>
+                                <figcaption>
+                                    <span class="boldt">Fig.4:</span> MVPNet categories.
+                                    <!-- Hover on the sector introduces the exact amount and ratio of the category.  -->
+                                </figcaption>                            
+                            </figure>
+                        </div>
+
+                        
                         <div style="clear:both;"></div>
                     </div>
                     
